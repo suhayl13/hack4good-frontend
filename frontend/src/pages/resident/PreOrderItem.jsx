@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './PreOrderItem.css';
 import Button from './Button'; 
 
-function ProductCatalog() {
+function PreOrderItem() {
   const navigate = useNavigate();
   const products = [
     { id: 1, name: 'Product 1', stock: true, availableQuantity: 5 },
@@ -96,4 +96,4 @@ function ProductCatalog() {
   );
 }
 
-export default ProductCatalog;
+export default PreOrderItem;
