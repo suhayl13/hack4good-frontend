@@ -1,0 +1,93 @@
+/* Login Page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-page height */
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+    margin: 0;
+  }
+  
+  /* Login Container */
+  .login-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Limit width for small screens */
+    text-align: center;
+  }
+  
+  /* Heading */
+  .login-container h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between inputs */
+  }
+  
+  /* Input Fields */
+  .login-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: border 0.3s ease;
+  }
+  
+  .login-container input:focus {
+    border-color: #3498db; /* Highlight on focus */
+    outline: none;
+    background: white;
+  }
+  
+  /* Button Styling */
+  .login-container button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-container button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  /* Error Message */
+  .login-container .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 30px 20px;
+    }
+  
+    .login-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .login-container input,
+    .login-container button {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
+  

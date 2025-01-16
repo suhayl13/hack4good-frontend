@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api'; // Use centralized API calls
+import './Login.css'; // Import the scoped CSS
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -14,7 +15,6 @@ function Login() {
       const response = await api.post('/auth/login', { email, password });
       const { role } = response.data;
 
-      // Redirect based on role
       if (role === 'resident') {
         navigate('/resident/dashboard');
       } else if (role === 'admin') {
@@ -28,26 +28,28 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div className="login-page">
+      <div className="login-container">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        {error && <p className="error">{error}</p>}
+      </div>
     </div>
   );
 }
