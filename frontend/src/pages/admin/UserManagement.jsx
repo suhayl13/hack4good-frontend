@@ -1,14 +1,37 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../../styles/UserManagement.css"; // Import the CSS file specific to this page
 
 function UserManagement() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
-    <div>
-      <h2>User Management</h2>
-      <button>Add New User</button>
-      <ul>
-        <li>User A - Active</li>
-        <li>User B - Suspended</li>
-      </ul>
+    <div className="user-management-container">
+      <h2 className="user-management-heading">User Management</h2>
+      <div className="user-management-buttons">
+        <button
+          className="user-management-button"
+          onClick={() => handleNavigation("/admin/add-user")}
+        >
+          Add User
+        </button>
+        <button
+          className="user-management-button"
+          onClick={() => handleNavigation("/admin/suspend-user")}
+        >
+          Suspend User
+        </button>
+        <button
+          className="user-management-button"
+          onClick={() => handleNavigation("/admin/reset-password")}
+        >
+          Reset Password
+        </button>
+      </div>
     </div>
   );
 }

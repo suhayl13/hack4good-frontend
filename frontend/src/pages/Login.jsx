@@ -11,16 +11,14 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post('/auth/login', { email, password });
-      const { role } = response.data;
+      const response = await api.post('/login', { email, password });
+      const { user } = response.data;
 
       // Redirect based on role
-      if (role === 'resident') {
-        navigate('/resident/dashboard');
-      } else if (role === 'admin') {
+      if (user.isAdmin) {
         navigate('/admin/dashboard');
       } else {
-        setError('Invalid role');
+        navigate('/resident/dashboard');
       }
     } catch (err) {
       setError('Invalid credentials');

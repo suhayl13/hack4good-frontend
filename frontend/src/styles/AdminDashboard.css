@@ -1,0 +1,49 @@
+/* Center the content */
+.dashboard-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  .dashboard-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  /* Button container */
+  .dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Button styles */
+  .dashboard-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Button hover effect */
+  .dashboard-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Button active effect */
+  .dashboard-button:active {
+    background-color: #003d82;
+    transform: translateY(1px);
+  }
+  
