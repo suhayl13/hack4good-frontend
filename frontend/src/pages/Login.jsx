@@ -12,15 +12,12 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post('/auth/login', { email, password });
-      const { role } = response.data;
-
+      const response = await api.post('/login', { email, password });
+      const { user } = response.data;
       if (role === 'resident') {
         navigate('/resident/dashboard');
       } else if (role === 'admin') {
         navigate('/admin/dashboard');
-      } else {
-        setError('Invalid role');
       }
     } catch (err) {
       setError('Invalid credentials');

@@ -1,0 +1,39 @@
+.suspend-user-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff3cd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .suspend-user-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #856404;
+  }
+  
+  .suspend-user-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #856404;
+    border-radius: 5px;
+  }
+  
+  .suspend-user-submit {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #d39e00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .suspend-user-submit:hover {
+    background-color: #b58900;
+  }
+  
