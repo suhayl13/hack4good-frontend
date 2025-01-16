@@ -1,5 +1,6 @@
-.request-management-container {
-    max-width: 800px;
+/* Container styles */
+.inventory-management-container {
+    max-width: 900px;
     margin: 50px auto;
     padding: 20px;
     background-color: #f8f9fa;
@@ -7,44 +8,72 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .request-management-heading {
+  /* Heading */
+  .inventory-management-heading {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
     color: #333;
   }
   
-  .request-list h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-    color: #007bff;
-  }
-  
-  .request-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .view-details-button {
+  /* Sort button */
+  .sort-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
     background-color: #007bff;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .view-details-button:hover {
+  .sort-button:hover {
     background-color: #0056b3;
   }
   
+  /* Inventory table */
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .inventory-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .inventory-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Modify button */
+  .modify-button {
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modify-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Pop-up styles */
   .popup {
     position: fixed;
     top: 0;
@@ -58,7 +87,7 @@
   }
   
   .popup-content {
-    background-color: #fff;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     width: 400px;
@@ -67,18 +96,19 @@
   
   .popup-content h3 {
     margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
   }
   
   .popup-content label {
     display: block;
-    margin-top: 15px;
+    margin: 10px 0;
     font-size: 1rem;
-    color: #333;
   }
   
   .popup-content input {
     width: 100%;
-    padding: 5px;
+    padding: 8px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -90,48 +120,35 @@
     margin-top: 20px;
   }
   
-  .approve-button {
+  .save-button {
     background-color: #28a745;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 15px;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .approve-button:hover {
+  .save-button:hover {
     background-color: #218838;
   }
   
-  .reject-button {
+  .cancel-button {
     background-color: #dc3545;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 15px;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .reject-button:hover {
+  .cancel-button:hover {
     background-color: #c82333;
   }
-  
-  .close-button {
-    background-color: #6c757d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .close-button:hover {
-    background-color: #5a6268;
-  }
-  
+
+  /* Back button */
   .back-button {
     display: inline-block;
     margin-bottom: 20px;

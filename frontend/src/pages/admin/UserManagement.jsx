@@ -11,6 +11,9 @@ function UserManagement() {
 
   return (
     <div className="user-management-container">
+        <button className="back-button" onClick={() => navigate("/admin/dashboard")}>
+        Back to Dashboard
+      </button>
       <h2 className="user-management-heading">User Management</h2>
       <div className="user-management-buttons">
         <button

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/RequestManagement.css";
+import { useNavigate } from "react-router-dom";
 
 function RequestManagement() {
+  const navigate = useNavigate();
+
   const [productRequests, setProductRequests] = useState([]);
   const [voucherRequests, setVoucherRequests] = useState([]);
   const [selectedRequest, setSelectedRequest] = useState(null); // Holds the request to show in the pop-up
@@ -14,13 +17,35 @@ function RequestManagement() {
       try {
         // Mock data for demonstration
         setProductRequests([
-          { id: 1, user: "John Doe", product: "Laptop", quantity: 1, status: "Pending" },
-          { id: 2, user: "Jane Smith", product: "Phone", quantity: 2, status: "Pending" },
+          {
+            id: 1,
+            user: "John Doe",
+            product: "Laptop",
+            quantity: 1,
+            status: "Pending",
+          },
+          {
+            id: 2,
+            user: "Jane Smith",
+            product: "Phone",
+            quantity: 2,
+            status: "Pending",
+          },
         ]);
 
         setVoucherRequests([
-          { id: 1, user: "John Doe", description: "Performance Task", status: "Pending" },
-          { id: 2, user: "Jane Smith", description: "Community Service", status: "Pending" },
+          {
+            id: 1,
+            user: "John Doe",
+            description: "Performance Task",
+            status: "Pending",
+          },
+          {
+            id: 2,
+            user: "Jane Smith",
+            description: "Community Service",
+            status: "Pending",
+          },
         ]);
       } catch (error) {
         console.error("Error fetching requests:", error);
@@ -46,9 +71,13 @@ function RequestManagement() {
   const handleRequestAction = (action, request, voucherAmount = null) => {
     if (action === "approve") {
       if (request.product) {
-        console.log(`Product request approved. Deducting ${request.quantity} from inventory.`);
+        console.log(
+          `Product request approved. Deducting ${request.quantity} from inventory.`
+        );
       } else if (voucherAmount) {
-        console.log(`Voucher request approved. Crediting user ${request.user} with ${voucherAmount}.`);
+        console.log(
+          `Voucher request approved. Crediting user ${request.user} with ${voucherAmount}.`
+        );
       }
     } else {
       console.log(`${action} action taken for request ID: ${request.id}`);
@@ -58,6 +87,12 @@ function RequestManagement() {
 
   return (
     <div className="request-management-container">
+      <button
+        className="back-button"
+        onClick={() => navigate("/admin/dashboard")}
+      >
+        Back to Dashboard
+      </button>
       <h2 className="request-management-heading">Request Management</h2>
 
       <div className="request-list">
@@ -65,8 +100,14 @@ function RequestManagement() {
         <ul>
           {productRequests.map((request) => (
             <li key={request.id} className="request-item">
-              <span>{request.product} (x{request.quantity}) requested by {request.user}</span>
-              <button className="view-details-button" onClick={() => handleViewDetails(request)}>
+              <span>
+                {request.product} (x{request.quantity}) requested by{" "}
+                {request.user}
+              </span>
+              <button
+                className="view-details-button"
+                onClick={() => handleViewDetails(request)}
+              >
                 View More
               </button>
             </li>
@@ -77,8 +118,13 @@ function RequestManagement() {
         <ul>
           {voucherRequests.map((request) => (
             <li key={request.id} className="request-item">
-              <span>{request.description} requested by {request.user}</span>
-              <button className="view-details-button" onClick={() => handleViewDetails(request)}>
+              <span>
+                {request.description} requested by {request.user}
+              </span>
+              <button
+                className="view-details-button"
+                onClick={() => handleViewDetails(request)}
+              >
                 View More
               </button>
             </li>
@@ -90,23 +136,33 @@ function RequestManagement() {
         <div className="popup">
           <div className="popup-content">
             <h3>Request Details</h3>
-            <p><strong>User:</strong> {selectedRequest.user}</p>
+            <p>
+              <strong>User:</strong> {selectedRequest.user}
+            </p>
             {selectedRequest.product && (
               <>
-                <p><strong>Product:</strong> {selectedRequest.product}</p>
-                <p><strong>Quantity:</strong> {selectedRequest.quantity}</p>
+                <p>
+                  <strong>Product:</strong> {selectedRequest.product}
+                </p>
+                <p>
+                  <strong>Quantity:</strong> {selectedRequest.quantity}
+                </p>
               </>
             )}
             {!selectedRequest.product && (
               <>
-                <p><strong>Description:</strong> {selectedRequest.description}</p>
+                <p>
+                  <strong>Description:</strong> {selectedRequest.description}
+                </p>
                 <label>
                   Voucher Amount:
                   <input
                     type="number"
                     min="1"
                     placeholder="Enter amount"
-                    onChange={(e) => (selectedRequest.voucherAmount = e.target.value)}
+                    onChange={(e) =>
+                      (selectedRequest.voucherAmount = e.target.value)
+                    }
                   />
                 </label>
               </>
@@ -115,7 +171,13 @@ function RequestManagement() {
             <div className="popup-actions">
               <button
                 className="approve-button"
-                onClick={() => handleRequestAction("approve", selectedRequest, selectedRequest.voucherAmount)}
+                onClick={() =>
+                  handleRequestAction(
+                    "approve",
+                    selectedRequest,
+                    selectedRequest.voucherAmount
+                  )
+                }
               >
                 Approve
               </button>
@@ -126,7 +188,9 @@ function RequestManagement() {
                 Reject
               </button>
             </div>
-            <button className="close-button" onClick={closePopup}>Close</button>
+            <button className="close-button" onClick={closePopup}>
+              Close
+            </button>
           </div>
         </div>
       )}

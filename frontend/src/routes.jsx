@@ -34,6 +34,8 @@ function AppRoutes() {
         <Route path="/admin/add-user" element={<AddUser />} />
         <Route path="/admin/suspend-user" element={<SuspendUser />} />
         <Route path="/admin/reset-password" element={<ResetPassword />} />
+        <Route path="/admin/reports" element={<Reports />} />
+
 
         {/* Default Route */}
         <Route path="/" element={<Login />} />

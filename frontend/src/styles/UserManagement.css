@@ -40,4 +40,22 @@
     background-color: #003d82;
     transform: translateY(1px);
   }
+
+  /* Back button */
+  .back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #5a6268;
+  }
   
