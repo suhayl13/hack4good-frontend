@@ -1,0 +1,112 @@
+/* Page Layout */
+.voucher-request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    height: 90vh; /* Full page height */
+    background-color: #f9f9f9; /* Light background */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Section */
+  .voucher-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50; /* Dark text color */
+  }
+  
+  /* Main Content */
+  .voucher-content {
+    width: 100%;
+    max-width: 600px; /* Restrict content width */
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #34495e;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Styles */
+  .request-voucher-form {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    color: #34495e;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow */
+  }
+  
+  textarea {
+    height: 100px; /* Larger input for textarea */
+    resize: none;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    background: white;
+  }
+  
+  /* Back Button Container */
+  .back-button-container {
+    margin-bottom: 00px; /* Space below the button */
+    text-align: left; /* Align the button to the left */
+    background-color: #f9f9f9
+  }
+  
+  /* Button Styling */
+  .back-button-container .btn {
+    background-color: #6c757d; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .back-button-container .btn:hover {
+    background-color: #6c757d; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
