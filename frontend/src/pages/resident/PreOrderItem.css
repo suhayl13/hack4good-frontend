@@ -1,0 +1,141 @@
+/* Product Catalog Layout */
+.product-catalog-preorder {
+  display: flex;
+  justify-content: space-between; /* Align shopping list and product grid */
+  padding: 20px;
+  gap: 20px; /* Space between sections */
+}
+
+/* Shopping List Section */
+.shopping-list-preorder {
+  flex: 1; /* Smaller space for the shopping list */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  height: fit-content;
+  margin-top: 60px;
+}
+
+.shopping-list-preorder h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.shopping-list-preorder ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping-list-preorder li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-name-preorder {
+  font-weight: bold;
+  flex: 2;
+}
+
+.item-quantity-preorder {
+  font-size: 1.2rem; /* Make quantity stand out */
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 10px;
+}
+
+.remove-button-preorder {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.remove-button-preorder:hover {
+  background: darkred;
+}
+
+/* Products Summary Section */
+.products-summary-preorder {
+  flex: 3; /* Larger space for products grid */
+  margin-top: 0;
+}
+
+.caption-preorder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.products-container-preorder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 tiles per row */
+  gap: 20px; /* Space between tiles */
+  padding: 20px;
+}
+
+.product-tile-preorder {
+  width: 240px;
+  height: 140px;
+  background: linear-gradient(150deg, #3498db, #2ecc71);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.product-tile-preorder:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+  /* Back Button Container */
+  .back-button-container-products {
+    margin-bottom: 10px; /* Space below the button */
+    text-align: left; /* Align the button to the left */
+  }
+  
+  /* Button Styling */
+  .back-button-container-products .btn {
+    background-color: #3498db; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .back-button-container-products .btn:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
