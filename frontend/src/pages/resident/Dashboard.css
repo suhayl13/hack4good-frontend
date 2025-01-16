@@ -1,0 +1,57 @@
+/* Header Container */
+.header-container {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between user name and sign-out button */
+  align-items: center; /* Vertically center-align elements */
+  background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient background */
+  padding: 20px 30px; /* Padding for spacing */
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  margin-bottom: 40px; /* Space below the header */
+}
+
+/* User Name Styling */
+.header {
+  font-family: 'Poppins', sans-serif; /* Elegant font */
+  font-size: 2.2rem; /* Balanced size */
+  font-weight: bold;
+  color: #ffffff; /* White text for contrast */
+  margin: 0; /* Reset margin */
+}
+
+/* Highlighted Username */
+.header span {
+  color: #f39c12; /* Golden yellow for emphasis */
+  font-weight: 900; /* Extra bold */
+}
+
+/* Sign Out Button */
+.sign-out-button {
+  background-color: #6c757d; /* Red button for emphasis */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Spacing inside the button */
+  border-radius: 5px; /* Smooth corners */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-out-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .sign-out-button {
+    margin-top: 10px; /* Add space between the button and name */
+    align-self: flex-end; /* Move the button to the right */
+  }
+}

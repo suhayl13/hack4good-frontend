@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login"; // Common login page
 import ResidentDashboard from "./pages/resident/Dashboard";
-import ProductCatalog from "./pages/resident/ProductCatalog";
-import VoucherManagement from "./pages/resident/VoucherManagement";
+import VoucherRequest from "./pages/resident/VoucherRequest";
+import RequestItem from "./pages/resident/RequestItem";
+import PreOrderItem from "./pages/resident/PreOrderItem";
+import TransactionHistory from "./pages/resident/FullTransactionHistory";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import UserManagement from "./pages/admin/UserManagement";
 import InventoryManagement from "./pages/admin/InventoryManagement";
@@ -21,8 +23,11 @@ function AppRoutes() {
 
         {/* Resident Routes */}
         <Route path="/resident/dashboard" element={<ResidentDashboard />} />
-        <Route path="/resident/catalog" element={<ProductCatalog />} />
-        <Route path="/resident/vouchers" element={<VoucherManagement />} />
+        <Route path="/resident/vouchers" element={<VoucherRequest />} />
+        <Route path="/resident/RequestItem" element={<RequestItem />} />
+        <Route path="/resident/PreOrderItem" element={<PreOrderItem />} />
+        <Route path="/resident/TransactionHistory" element={<TransactionHistory />} />
+
 
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
